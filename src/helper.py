@@ -6,7 +6,7 @@ from langchain.schema import Document
 
 # extract data from pdf file
 def load_pdf_file(data):
-    loader = DirectoryLoader(data,globe="*.pdf",loader = PyPDFLoader)
+    loader = DirectoryLoader(data,glob="*.pdf",loader_cls=PyPDFLoader)
     
     documents = loader.load()
     
